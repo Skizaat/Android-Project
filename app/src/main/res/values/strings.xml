@@ -1,3 +1,33 @@
 <resources>
     <string name="app_name">My Ghibli</string>
+
+    <string-array name="gender_choices">
+        <item>Male</item>
+        <item>Female</item>
+        <item>Other</item>
+    </string-array>
+
+    <string-array name="hair_choices">
+        <item>Brown</item>
+        <item>Black</item>
+        <item>Green</item>
+        <item>Peach</item>
+        <item>White</item>
+        <item>Grey</item>
+        <item>Blue</item>
+        <item>Yellow</item>
+        <item>Red</item>
+        <item>Bald</item>
+    </string-array>
+
+    <string-array name="eye_choices">
+        <item>Black</item>
+        <item>Brown</item>
+        <item>Green</item>
+        <item>Blue</item>
+        <item>Grey</item>
+        <item>Red</item>
+        <item>Yellow</item>
+        <item>White</item>
+    </string-array>
 </resources>
