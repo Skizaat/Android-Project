@@ -9,6 +9,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.Switch;
@@ -203,6 +204,28 @@ public class TestActivity extends AppCompatActivity {
                     //rain information
                     Switch rainswt = (Switch) findViewById(R.id.switch1);
                     userdata[5] = String.valueOf(rainswt.isChecked());
+
+                    //terrain information
+                    Spinner terrspn = (Spinner) findViewById(R.id.terrainspinner);
+                    String terrain = terrspn.getSelectedItem().toString();
+                    userdata[6] = terrain;
+
+                    //Magic information
+                    CheckBox magicckb = (CheckBox) findViewById(R.id.checkBox);
+                    userdata[7] = String.valueOf(magicckb.isChecked());
+
+                    //fav color information
+                    Spinner favspn = (Spinner) findViewById(R.id.colorspinner);
+                    String color = favspn.getSelectedItem().toString();
+                    userdata[8] = color;
+
+                    //flying information
+                    Switch flyswt = (Switch) findViewById(R.id.switch2);
+                    userdata[9] = String.valueOf(flyswt.isChecked());
+
+                    //bacon-speculos information
+                    Switch bsswt = (Switch) findViewById(R.id.switch3);
+                    userdata[10] = String.valueOf(bsswt.isChecked());
 
 
                     Intent intent = new Intent(TestActivity.this, ResultActivity.class);

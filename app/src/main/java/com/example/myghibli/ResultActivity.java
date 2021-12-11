@@ -18,10 +18,13 @@ public class ResultActivity extends AppCompatActivity {
         Intent intent = getIntent();
         String[] datas = intent.getStringArrayExtra("Datas");
 
-        TextView nameuser = (TextView) findViewById(R.id.nameView);
-        nameuser.setText(datas[0]);
+        String listdata = "";
 
-        TextView ageuser = (TextView) findViewById(R.id.ageView);
-        ageuser.setText(datas[1]);
+        for (int i=0 ; i<datas.length ; i++){
+            listdata += datas[i] + ",";
+        }
+
+        TextView Checkdata = (TextView) findViewById(R.id.nameView);
+        Checkdata.setText(listdata);
     }
 }
