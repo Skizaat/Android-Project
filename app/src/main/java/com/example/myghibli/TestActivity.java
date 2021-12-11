@@ -30,18 +30,40 @@ public class TestActivity extends AppCompatActivity {
                 .hide(locateFragment)
                 .commit();
 
+        Fragment sideFragment = fm.findFragmentById(R.id.sideFragment);
+        fm.beginTransaction()
+                .setCustomAnimations(android.R.animator.fade_in, android.R.animator.fade_out)
+                .hide(sideFragment)
+                .commit();
+
+        Fragment vehicleFragment = fm.findFragmentById(R.id.vehicleFragment);
+        fm.beginTransaction()
+                .setCustomAnimations(android.R.animator.fade_in, android.R.animator.fade_out)
+                .hide(vehicleFragment)
+                .commit();
+
+
         Button peopleBtn = (Button) findViewById(R.id.peoplebutton);
         peopleBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 fm.beginTransaction()
                         .setCustomAnimations(android.R.animator.fade_in, android.R.animator.fade_out)
-                        .show(informFragment)
+                        .hide(locateFragment)
                         .commit();
                 fm.beginTransaction()
                         .setCustomAnimations(android.R.animator.fade_in, android.R.animator.fade_out)
-                        .hide(locateFragment)
+                        .hide(sideFragment)
                         .commit();
+                fm.beginTransaction()
+                        .setCustomAnimations(android.R.animator.fade_in, android.R.animator.fade_out)
+                        .hide(vehicleFragment)
+                        .commit();
+                fm.beginTransaction()
+                        .setCustomAnimations(android.R.animator.fade_in, android.R.animator.fade_out)
+                        .show(informFragment)
+                        .commit();
+
             }
         });
 
@@ -49,18 +71,70 @@ public class TestActivity extends AppCompatActivity {
         locationBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
                 fm.beginTransaction()
                         .setCustomAnimations(android.R.animator.fade_in, android.R.animator.fade_out)
-                        .show(locateFragment)
+                        .hide(sideFragment)
                         .commit();
                 fm.beginTransaction()
                         .setCustomAnimations(android.R.animator.fade_in, android.R.animator.fade_out)
                         .hide(informFragment)
                         .commit();
+                fm.beginTransaction()
+                        .setCustomAnimations(android.R.animator.fade_in, android.R.animator.fade_out)
+                        .hide(vehicleFragment)
+                        .commit();
+                fm.beginTransaction()
+                        .setCustomAnimations(android.R.animator.fade_in, android.R.animator.fade_out)
+                        .show(locateFragment)
+                        .commit();
             }
         });
 
+        Button SidekickBtn = (Button) findViewById(R.id.sidekickbutton);
+        SidekickBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                fm.beginTransaction()
+                        .setCustomAnimations(android.R.animator.fade_in, android.R.animator.fade_out)
+                        .hide(locateFragment)
+                        .commit();
+                fm.beginTransaction()
+                        .setCustomAnimations(android.R.animator.fade_in, android.R.animator.fade_out)
+                        .hide(informFragment)
+                        .commit();
+                fm.beginTransaction()
+                        .setCustomAnimations(android.R.animator.fade_in, android.R.animator.fade_out)
+                        .hide(vehicleFragment)
+                        .commit();
+                fm.beginTransaction()
+                        .setCustomAnimations(android.R.animator.fade_in, android.R.animator.fade_out)
+                        .show(sideFragment)
+                        .commit();
+            }
+        });
+
+        Button VehicleBtn = (Button) findViewById(R.id.vehiclebutton);
+        VehicleBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                fm.beginTransaction()
+                        .setCustomAnimations(android.R.animator.fade_in, android.R.animator.fade_out)
+                        .hide(locateFragment)
+                        .commit();
+                fm.beginTransaction()
+                        .setCustomAnimations(android.R.animator.fade_in, android.R.animator.fade_out)
+                        .hide(informFragment)
+                        .commit();
+                fm.beginTransaction()
+                        .setCustomAnimations(android.R.animator.fade_in, android.R.animator.fade_out)
+                        .hide(sideFragment)
+                        .commit();
+                fm.beginTransaction()
+                        .setCustomAnimations(android.R.animator.fade_in, android.R.animator.fade_out)
+                        .show(vehicleFragment)
+                        .commit();
+            }
+        });
 
     }
 
