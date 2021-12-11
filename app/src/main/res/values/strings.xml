@@ -36,11 +36,9 @@
         <item>Hill</item>
         <item>Plain</item>
         <item>Marsh</item>
-        <item>Forrest</item>
+        <item>Forest</item>
         <item>City</item>
         <item>River</item>
         <item>Ocean</item>
     </string-array>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
