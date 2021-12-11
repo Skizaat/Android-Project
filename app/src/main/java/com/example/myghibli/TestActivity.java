@@ -18,24 +18,50 @@ public class TestActivity extends AppCompatActivity {
 
         FragmentManager fm = getSupportFragmentManager();
 
-        Button peopleBtn = (Button) findViewById(R.id.peoplebutton);
-        peopleBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-                Fragment informFragment = fm.findFragmentById(R.id.informFragment);
-                fm.beginTransaction()
-                        .setCustomAnimations(android.R.animator.fade_in, android.R.animator.fade_out)
-                        .show(informFragment)
-                        .commit();
-            }
-        });
-
         Fragment informFragment = fm.findFragmentById(R.id.informFragment);
         fm.beginTransaction()
                 .setCustomAnimations(android.R.animator.fade_in, android.R.animator.fade_out)
                 .hide(informFragment)
                 .commit();
+
+        Fragment locateFragment = fm.findFragmentById(R.id.locateFragment);
+        fm.beginTransaction()
+                .setCustomAnimations(android.R.animator.fade_in, android.R.animator.fade_out)
+                .hide(locateFragment)
+                .commit();
+
+        Button peopleBtn = (Button) findViewById(R.id.peoplebutton);
+        peopleBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                fm.beginTransaction()
+                        .setCustomAnimations(android.R.animator.fade_in, android.R.animator.fade_out)
+                        .show(informFragment)
+                        .commit();
+                fm.beginTransaction()
+                        .setCustomAnimations(android.R.animator.fade_in, android.R.animator.fade_out)
+                        .hide(locateFragment)
+                        .commit();
+            }
+        });
+
+        Button locationBtn = (Button) findViewById(R.id.locationbutton);
+        locationBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                fm.beginTransaction()
+                        .setCustomAnimations(android.R.animator.fade_in, android.R.animator.fade_out)
+                        .show(locateFragment)
+                        .commit();
+                fm.beginTransaction()
+                        .setCustomAnimations(android.R.animator.fade_in, android.R.animator.fade_out)
+                        .hide(informFragment)
+                        .commit();
+            }
+        });
+
+
     }
 
 

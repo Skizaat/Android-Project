@@ -30,4 +30,15 @@
         <item>Yellow</item>
         <item>White</item>
     </string-array>
+
+    <string-array name="terrain_choices">
+        <item>Mountain</item>
+        <item>Hill</item>
+        <item>Plain</item>
+        <item>Marsh</item>
+        <item>Forrest</item>
+        <item>City</item>
+        <item>River</item>
+        <item>Ocean</item>
+    </string-array>
 </resources>

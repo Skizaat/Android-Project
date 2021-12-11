@@ -19,18 +19,38 @@
         android:hint="your age"
         android:minHeight="48dp" />
 
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Your genre:" />
+
     <Spinner
         android:id="@+id/genderspinner"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Your hair color:" />
 
     <Spinner
         android:id="@+id/haircolorspinner"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Your eye color:" />
+
     <Spinner
         android:id="@+id/eyecolorspinner"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
+
 </LinearLayout>
