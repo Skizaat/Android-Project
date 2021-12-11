@@ -8,8 +8,11 @@ import androidx.fragment.app.Fragment;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 public class TestActivity extends AppCompatActivity {
+
+    int clicknb =0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -136,7 +139,24 @@ public class TestActivity extends AppCompatActivity {
             }
         });
 
+        Button resultsBtn = (Button) findViewById(R.id.seeresultsbutton);
+        resultsBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (clicknb == 0){
+                    Toast.makeText(getApplicationContext(), "Are you sure you respond all questions ?",
+                            Toast.LENGTH_LONG).show();
+                    clicknb+=1;
+                }
+                else {
+                    Toast.makeText(getApplicationContext(), "Results are coming ...",
+                            Toast.LENGTH_LONG).show();
+                }
+
+                //creating a list to stock all datas from the user
+                
+            }
+        });
+
     }
-
-
 }
