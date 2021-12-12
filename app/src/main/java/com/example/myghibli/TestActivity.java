@@ -7,6 +7,7 @@ import androidx.fragment.app.Fragment;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
@@ -17,7 +18,7 @@ import android.widget.Toast;
 
 public class TestActivity extends AppCompatActivity {
 
-    int clicknb =0;
+    int clicknb = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -165,7 +166,7 @@ public class TestActivity extends AppCompatActivity {
                     //name edit view, if null do not send results
                     EditText nameedittext = (EditText) findViewById(R.id.nameeditView);
                     String name = String.valueOf(nameedittext.getText());
-                    if (name != ""){
+                    if (!name.equals("")){
                         userdata[0] = name;
                     }
                     else{
@@ -177,7 +178,7 @@ public class TestActivity extends AppCompatActivity {
                     //age edit view, if null do not send results
                     EditText ageeditext = (EditText) findViewById(R.id.ageeditView);
                     String age = String.valueOf(ageeditext.getText());
-                    if (age != ""){
+                    if (!age.equals("")){
                         userdata[1] = age;
                     }
                     else{

@@ -26,5 +26,9 @@ public class ResultActivity extends AppCompatActivity {
 
         TextView Checkdata = (TextView) findViewById(R.id.nameView);
         Checkdata.setText(listdata);
+
+        String url = new String("https://ghibliapi.herokuapp.com/people?hair_color=Peach");
+        AsyncGhibliJSONData task = new AsyncGhibliJSONData(this);
+        task.execute(url);
     }
 }
