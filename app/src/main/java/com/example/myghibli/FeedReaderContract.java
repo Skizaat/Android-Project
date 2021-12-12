@@ -24,8 +24,8 @@ public final class FeedReaderContract {
             "CREATE TABLE " + FeedEntry.TABLE_NAME + " (" +
                     FeedEntry._ID + " INTEGER PRIMARY KEY," +
                     FeedEntry.COLUMN_NAME_PEOPLE + " TEXT," +
-                    FeedEntry.COLUMN_NAME_LOCATION + " TEXT)"+
-                    FeedEntry.COLUMN_NAME_SIDEKICK + " TEXT)"+
+                    FeedEntry.COLUMN_NAME_LOCATION + " TEXT,"+
+                    FeedEntry.COLUMN_NAME_SIDEKICK + " TEXT,"+
                     FeedEntry.COLUMN_NAME_VEHICLE + " TEXT)";
 
     static final String SQL_DELETE_ENTRIES =

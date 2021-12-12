@@ -4,6 +4,8 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 import java.sql.Array;
@@ -31,5 +33,26 @@ public class ResultActivity extends AppCompatActivity {
 
         AsyncGhibliJSONData vehicletask = new AsyncGhibliJSONData(this);
         vehicletask.execute("vehicles", datas[9]);
+
+        Button save = (Button)findViewById(R.id.savebutton);
+        save.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String people = ((TextView)findViewById(R.id.peopleResult)).getText().toString();
+                String location = ((TextView)findViewById(R.id.locationResult)).getText().toString();
+                String sidekick = ((TextView)findViewById(R.id.sideResult)).getText().toString();
+                String vehicle = ((TextView)findViewById(R.id.vehicleResult)).getText().toString();
+
+                FeedReaderDbHelper dbHelper = new FeedReaderDbHelper(v.getContext());
+                dbHelper.insertData(people, location, sidekick, vehicle);
+
+                save.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+
+                    }
+                });
+            }
+        });
     }
 }

@@ -60,7 +60,7 @@ public class AsyncGhibliJSONData extends AsyncTask<String, Void, JSONArray> {
         //construction d'url pour la recherche de location
         if (strings[0].equals("locations")){
             urlString += "terrain=" + strings[1];
-            if (strings.length>1) {
+            if (strings.length>2) {
                 if (strings[2].equals("false")) {
                     urlString += "&climate=Continental";
                 }
