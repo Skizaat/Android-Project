@@ -28,7 +28,7 @@ public class SideFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_side, container, false);
 
         Spinner spinner = (Spinner)view.findViewById(R.id.colorspinner);
-        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(getContext(), R.array.color_choices, android.R.layout.simple_spinner_item);
+        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(getContext(), R.array.eye_choices, android.R.layout.simple_spinner_item);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinner.setAdapter(adapter);
 

@@ -69,16 +69,16 @@ public class AsyncGhibliJSONData extends AsyncTask<String, Void, JSONArray> {
 
         //construction d'url pour la recherche de sidekick
         if (strings[0].equals("species")){
-            if (strings[1].equals(false)){
+            if (strings[1].equals("false")){
                 urlString += "classification=Mammal";
             }
             if (strings.length>2) {
-                if (strings[2].equals("White")){
+                if (strings[2].equals("White") || strings[2].equals("Grey")){
                     urlString += "&hair_colors=" + strings[2];
                 }
             }
             if (strings.length>3) {
-                if (strings[2].equals("Red")){
+                if (strings[2].equals("Red") || strings[2].equals("Brown") || strings.equals("Grey")){
                     urlString += "&eye_colors=" + strings[2];
                 }
             }
@@ -142,7 +142,7 @@ public class AsyncGhibliJSONData extends AsyncTask<String, Void, JSONArray> {
         URL url = null;
         JSONArray resultjson = null;
 
-        //on obtient une prelière fois le résultat
+        //on obtient une première fois le résultat
         try {
             url = buildURL(strings);
         } catch (MalformedURLException e) {
@@ -160,7 +160,7 @@ public class AsyncGhibliJSONData extends AsyncTask<String, Void, JSONArray> {
             stringslengh -= 1;
 
             try {
-                url = buildURL(strings);
+                url = buildURL(newargs);
             } catch (MalformedURLException e) {
                 e.printStackTrace();
             }

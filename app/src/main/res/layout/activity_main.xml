@@ -45,6 +45,18 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textViewtitle"
-        app:layout_constraintVertical_bias="0.94"
+        app:layout_constraintVertical_bias="0.75"
         app:rippleColor="@color/purple_200" />
+
+    <Button
+        android:id="@+id/accessdatabase"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="57dp"
+        android:text="My saved results"
+        app:layout_constraintBottom_toBottomOf="@+id/imageViewbackground"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Start"
+        app:layout_constraintVertical_bias="0.16000003" />
 </androidx.constraintlayout.widget.ConstraintLayout>
