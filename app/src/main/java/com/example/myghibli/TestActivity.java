@@ -155,8 +155,6 @@ public class TestActivity extends AppCompatActivity {
                     clicknb+=1;
                 }
                 else {
-                    Toast.makeText(getApplicationContext(), "Results are coming ...",
-                            Toast.LENGTH_LONG).show();
 
                     //creating a list to stock all datas from the user
                     String[] userdata = new String[11];

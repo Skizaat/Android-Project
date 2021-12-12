@@ -15,20 +15,21 @@ public class ResultActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_result);
 
+        //récupère les informations rentrées dans l'activité précédente
         Intent intent = getIntent();
         String[] datas = intent.getStringArrayExtra("Datas");
 
-        String listdata = "";
 
-        for (int i=0 ; i<datas.length ; i++){
-            listdata += datas[i] + ",";
-        }
+        AsyncGhibliJSONData peopletask = new AsyncGhibliJSONData(this);
+        peopletask.execute("people", datas[3], datas[2], datas[4]);
 
-        TextView Checkdata = (TextView) findViewById(R.id.nameView);
-        Checkdata.setText(listdata);
+        AsyncGhibliJSONData locationtask = new AsyncGhibliJSONData(this);
+        locationtask.execute("locations", datas[6], datas[5]);
 
-        String url = new String("https://ghibliapi.herokuapp.com/people?hair_color=Peach");
-        AsyncGhibliJSONData task = new AsyncGhibliJSONData(this);
-        task.execute(url);
+        AsyncGhibliJSONData sidetask = new AsyncGhibliJSONData(this);
+        sidetask.execute("species", datas[7], datas[8], datas[8]);
+
+        AsyncGhibliJSONData vehicletask = new AsyncGhibliJSONData(this);
+        vehicletask.execute("vehicles", datas[9]);
     }
 }

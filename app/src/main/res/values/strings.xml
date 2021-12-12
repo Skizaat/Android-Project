@@ -41,4 +41,12 @@
         <item>River</item>
         <item>Ocean</item>
     </string-array>
+
+    <string-array name="color_choices">
+        <item>Brown</item>
+        <item>Grey</item>
+        <item>Red</item>
+        <item>White</item>
+        <item>Other</item>
+    </string-array>
 </resources>
