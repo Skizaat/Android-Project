@@ -60,12 +60,10 @@ public class FeedReaderDbHelper extends SQLiteOpenHelper {
         db.endTransaction();
     }
 
-    public void deleteSave(long id) {
+    public void deleteSaves() {
         SQLiteDatabase db = getWritableDatabase();
-        db.beginTransaction();
-        db.delete(DATABASE_NAME, _ID + "=" + id, null);
-        db.setTransactionSuccessful();
-        db.endTransaction();
+        db.execSQL(SQL_DELETE_ENTRIES);
+        onCreate(db);
     }
 
     @SuppressLint("Range")

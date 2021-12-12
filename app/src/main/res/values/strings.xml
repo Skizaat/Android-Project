@@ -17,7 +17,7 @@
         <item>Blue</item>
         <item>Yellow</item>
         <item>Red</item>
-        <item>Bald</item>
+        <item>None</item>
     </string-array>
 
     <string-array name="eye_choices">
