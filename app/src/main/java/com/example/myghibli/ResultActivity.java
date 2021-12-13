@@ -54,5 +54,23 @@ public class ResultActivity extends AppCompatActivity {
                 });
             }
         });
+
+        Button databasebutton = (Button) findViewById(R.id.seesavedbutton);
+        databasebutton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(ResultActivity.this, DataBaseActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        Button restartbutton = (Button) findViewById(R.id.restartbutton);
+        restartbutton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(ResultActivity.this, TestActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 }

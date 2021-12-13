@@ -2,6 +2,7 @@ package com.example.myghibli;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ArrayAdapter;
@@ -30,6 +31,15 @@ public class DataBaseActivity extends AppCompatActivity {
                 FeedReaderDbHelper db = new FeedReaderDbHelper(v.getContext());
                 db.deleteSaves();
                 list.setAdapter(new ArrayAdapter<String>(list.getContext(), R.layout.support_simple_spinner_dropdown_item));
+            }
+        });
+
+        Button mainbutton = (Button) findViewById(R.id.mainbutton);
+        mainbutton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(DataBaseActivity.this, MainActivity.class);
+                startActivity(intent);
             }
         });
     }

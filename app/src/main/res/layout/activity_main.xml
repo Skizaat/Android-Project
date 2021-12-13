@@ -59,4 +59,16 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Start"
         app:layout_constraintVertical_bias="0.16000003" />
+
+    <ImageButton
+        android:id="@+id/quitimageButton"
+        android:layout_width="494dp"
+        android:layout_height="480dp"
+        android:layout_marginStart="112dp"
+        android:layout_marginBottom="452dp"
+        android:scaleX="0.06"
+        android:scaleY="0.06"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/closevide" />
 </androidx.constraintlayout.widget.ConstraintLayout>
