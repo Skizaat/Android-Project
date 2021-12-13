@@ -37,7 +37,7 @@ public class MainActivity extends AppCompatActivity {
         quit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                MainActivity.this.finish();
+                finishAffinity();
                 System.exit(0);
             }
         });

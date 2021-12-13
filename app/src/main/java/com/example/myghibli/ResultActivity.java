@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.sql.Array;
 
@@ -49,7 +50,8 @@ public class ResultActivity extends AppCompatActivity {
                 save.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-
+                        Toast.makeText(getApplicationContext(), "You already saved your results",
+                                Toast.LENGTH_LONG).show();
                     }
                 });
             }
